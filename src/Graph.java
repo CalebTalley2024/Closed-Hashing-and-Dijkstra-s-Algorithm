@@ -21,28 +21,40 @@ public class Graph {
     // need condition for if I dont reach the goal
 
     //    DIjkstra: returns path, length of the path, and now many nodes traveled for the path
-    public static ArrayList<Object> dijkstra (int[][] adj, int start, int end ){
+    public static void dijkstra (int[][] adj, int start, int end, ArrayList<Integer> knownPath){
+        // add the start node to the knownPaths
+        knownPath.add(start);
         // implement scanner later///////
         int length = adjMatrix.length;
         // iterate through first row till you see a non zero value
         //i: column, j: row
-        for(int i = 0; i< length;i++){
-            for(int j = 0; j<length;j++){
+        int i  = start;
+            for(int j = start+1; j<length;j++){
+                // end condition
+                 if(j == end){
+                     knownPath.add(end);
 
-
-
-
-                if(adj[i][j] !=0){
-
+                     // end the loop
+                     break;
+                 }
+                else if(adj[i][j] !=0){
+                     // make i equal to j and transverse through the list again
+                     i = j;
+                     dijkstra(adj,i,end, knownPath);
+                     
 
                 }
+                if(j == length-1){
+                    // this is a dead end
+                }
             }
-        }
 
+        System.out.println(knownPath);
+//        return knownPath;
 
     }
-    public void pathFinder(int[]row, int end ){
-        int length  = row.length;
+    public void pathFinder(int[][] adj, int start, int end,int column ){
+        int length = adjMatrix.length;
         for(int j = 0; j<length;j++){
             // check to see if your node is the one you are looking for
             
