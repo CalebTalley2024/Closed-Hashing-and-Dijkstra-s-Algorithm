@@ -3,7 +3,7 @@
 # Q1 - ~ 1-2 hrs
 
 # Q2 - ~ 1-2 hrs
-
+- Problem: we only have 156 distinct hash values, so why do the instructions say that the hash table will get close to being full
 # Q3 - ~ 3-4 hrs
 
 # Q4: Dijsktra's Algorithm
