@@ -15,20 +15,11 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
 
-        File file = new File("EdgarAllanPoeBellsB2022groomed.txt");
+// Question 1
+//        System.out.println(Hash.getText());
+        System.out.println(Hash.isValidChar('\''));
+        System.out.println(Hash.cleanTxt("Today's #*(&$@*#$&@)*#($ Day is Happy-ThanksGIving"));
 
-        String currentPath = file.getAbsolutePath();
-        System.out.println(currentPath);
-        System.out.println(file.canRead());
-        Scanner scan = new Scanner(file);
-
-        while(scan.hasNext()){
-            String word = scan.next();
-            System.out.println(word);
-
-        }
-        scan.close();
-//        System.out.println(file);
 
 
 
