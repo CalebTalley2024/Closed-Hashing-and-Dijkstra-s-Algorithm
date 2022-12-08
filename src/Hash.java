@@ -8,22 +8,79 @@ import java.util.stream.Collectors;
 
 public class Hash {
 
-    public static Hashtable<Integer,Integer> setHashTable(List<Integer> uniqueHashValues){
-        int sizeHashTable = 293;
-        float loadFactor = 0.5f;
+    public static String Poe = "EdgarAllanPoeBellsB2022groomed.txt";
+    public static Hashtable<Integer,ArrayList<Object>> setHashTable(ArrayList<ArrayList<Object>> hashWordsValues){
+        int m = 293;
 //        List<Integer> hashValuesND = discardDuplicates(hashValues);
-        Hashtable<Integer,Integer> hashTable = new Hashtable<>(sizeHashTable,loadFactor);
-        for(int i =0; i<sizeHashTable;i++){
-            hashTable.put(i,uniqueHashValues.get(i));
-
+        Hashtable<Integer,ArrayList<Object>> HT = new Hashtable<>(m);
+//        if (hashtable.size() >= table_size){
+//            System.out.println("Table is full");
+//            break;
+//        }
+        for(int i =0; i<hashWordsValues.size();i++){
+            getKV(hashWordsValues.get(i),HT,0,m);
+            // Make function for when an index is taken
         }
-        return hashTable;
+        System.out.println(HT.size());
+        return HT;
     }
 
-    public static ArrayList<String> getHashedWords() throws FileNotFoundException {
+    public static void printHashTable(Hashtable<Integer,ArrayList<Object>> HT, int maxSize){
+        System.out.println("Hash Address | Hashed Word\t|\tHash Value of Word");
+        for(int i = 0; i<maxSize;i++){
+            int key = i;
+            if(HT.get(key)!= null){
+                String hashedWord = (String)HT.get(key).get(0);
+                int hashValue = (int)HT.get(key).get(1);
+                System.out.println(key +"\t|\t"+hashedWord+"\t\t\t\t|\t\t\t\t"+hashValue);
+            }
+
+        }
+
+    }
+
+    // getKV: get valid Key for hash value, casade down the hashmap if need. Also checks for duplicates
+    public static void getKV(ArrayList<Object> hashWordsValue, Hashtable<Integer,ArrayList<Object>> HT, int keyIncrement,int sizeHT){
+        // first check to make sure that the value we are trying to put in is NOT a duplicate of something already in the HashTable
+        if(!HT.containsValue(hashWordsValue)) {
+
+            int i = keyIncrement;
+            int m = sizeHT;
+            int hashValue = (int) hashWordsValue.get(1);
+            // does circling back for us
+            int newKey = (hashValue + i) % m;
+            // if the HT already has something at your key, look for the next value
+            if (HT.containsKey(newKey)) {
+                i++;
+                getKV(hashWordsValue, HT, i, m);
+            }
+
+            // make condition for if the table is full
+            else {
+                HT.put(newKey, hashWordsValue);
+            }
+        }
+
+    }
+
+    public static ArrayList<ArrayList<Object>> getWordsAndValues(String txtFile) throws FileNotFoundException {
+        ArrayList<String> words = getHashedWords(txtFile);
+        ArrayList<Integer> vals = Hash.getHashValues(words);
+        // WV: words and values
+        ArrayList<ArrayList<Object>> WV = new ArrayList<>();
+        for(int i = 0; i<words.size();i++){
+            //HO: hash object
+            ArrayList<Object> HO = new ArrayList<>();
+            HO.add(words.get(i));
+            HO.add(vals.get(i));
+            WV.add(HO);
+        }
+        return WV;
+    }
+    public static ArrayList<String> getHashedWords(String txtFile) throws FileNotFoundException {
         // in: our original txt file as a list of strings
         ArrayList<String> in = new ArrayList<>();
-        File file = new File("EdgarAllanPoeBellsB2022groomed.txt");
+        File file = new File(txtFile);
         Scanner scan = new Scanner(file);
         while(scan.hasNext()){
             String word = scan.next();
@@ -36,7 +93,7 @@ public class Hash {
         // out: filtered txt file as a list of strings
         ArrayList<String> out = new ArrayList<>();
 
-       in.forEach((word)-> out.add(cleanString(word)));
+        in.forEach((word)-> out.add(cleanString(word)));
         return out;
     }
 
@@ -66,8 +123,8 @@ public class Hash {
         boolean bool = false;
         if(
                 (c >= 'a' && c <= 'z') ||
-                (c >= 'A' && c <= 'Z') ||
-                (c == '-') || (c == '\'' )){
+                        (c >= 'A' && c <= 'Z') ||
+                        (c == '-') || (c == '\'' )){
             bool = true;
         }
         return bool;
@@ -91,12 +148,14 @@ public class Hash {
 
     }
 
-    public static ArrayList<String> discardDuplicates( ArrayList<String> hashNames){
-        List<String> noDups = hashNames.stream().distinct().collect(Collectors.toList());
-        ArrayList<String> out = new ArrayList<>();
-        noDups.forEach((word)-> out.add(word));
-        return out;
-    }
+
+// we cant use this function since it runs on O(n) complexity
+//    public static ArrayList<String> discardDuplicates( ArrayList<String> hashNames){
+//        List<String> noDups = hashNames.stream().distinct().collect(Collectors.toList());
+//        ArrayList<String> out = new ArrayList<>();
+//        noDups.forEach((word)-> out.add(word));
+//        return out;
+//    }
 
 
 

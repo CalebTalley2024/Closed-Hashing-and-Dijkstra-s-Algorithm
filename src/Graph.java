@@ -21,43 +21,55 @@ public class Graph {
     // need condition for if I dont reach the goal
 
     //    DIjkstra: returns path, length of the path, and now many nodes traveled for the path
-    public static void dijkstra (int[][] adj, int start, int end, ArrayList<Integer> knownPath){
+    public static void dijkstra (int[][] adj, int start, int end, ArrayList<Integer> knownPath, int columnIgnore, ArrayList<Integer> visitedRows){
+        // implement scanner later///////
         // add the start node to the knownPaths
         knownPath.add(start);
-        // implement scanner later///////
+
         int length = adjMatrix.length;
         // iterate through first row till you see a non zero value
-        //i: column, j: row
+        //i: row, j: column
         int i  = start;
-            for(int j = start+1; j<length;j++){
+        // add row to visted ArrayList
+        visitedRows.add(i);
+        for(int j = 0; j<length;j++){
+            // ignore values  equal to 0, the mirror (itself) and rows we have already looked at
+            if(adj[i][j] != 0 && j!=columnIgnore && !visitedRows.contains(j)){
                 // end condition
-                 if(j == end){
-                     knownPath.add(end);
-
-                     // end the loop
-                     break;
-                 }
-                else if(adj[i][j] !=0){
-                     // make i equal to j and transverse through the list again
-                     i = j;
-                     dijkstra(adj,i,end, knownPath);
-                     
+                if(j == end ){
+                    // finish out path
+                    knownPath.add(end);
+                    // end the loop
+                    System.out.println(knownPath);
+                    // we then remove the ending part so that the loop can continue
+                    knownPath.remove((Object)end);
+//                    knownPath.forEach(row -> visitedRows.remove((Object)row));
+                    continue;
 
                 }
-                if(j == length-1){
-                    // this is a dead end
+                else{
+                    //                    else if(adj[i][j] !=0){
+                    // make i equal to j and transverse through the list again
+                    int newStart = j;
+                    // ignore the mirrored value so that you are not in a never ending loop
+                    columnIgnore = i;
+                    ArrayList<Integer> newKnownPath = (ArrayList<Integer>) knownPath.clone();
+                    dijkstra(adj,newStart,end, newKnownPath,columnIgnore,visitedRows);
                 }
+//                knownPath.remove()
+
+
             }
 
-        System.out.println(knownPath);
-//        return knownPath;
+        }
 
+//        return knownPath;
     }
     public void pathFinder(int[][] adj, int start, int end,int column ){
         int length = adjMatrix.length;
         for(int j = 0; j<length;j++){
             // check to see if your node is the one you are looking for
-            
+
         }
     }
     // skip if the number is a zero
