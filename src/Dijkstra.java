@@ -1,12 +1,11 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
-import java.util.Vector;
+import java.lang.Object;
 
 public class Dijkstra {
 
-    int infinity = Integer.MAX_VALUE;
+//    int infinity = Integer.MAX_VALUE;
     int size = 10;
 
     public static int[][] adjMatrix = {
@@ -22,24 +21,10 @@ public class Dijkstra {
             {0, 0, 0, 0, 0, 0, 71, 66, 212, 0},
     };
 
-    int a = 1;
-    int b = 2;
-   public Dijkstra(int a,int b){
-      this.a = a;
-       this.b = b;
-    }
-    // pseudo code
-
-    // Priority queue methods needed
-    /* update
-     *update order
-     *
-     * */
+    public static CompareAL compareAL = new CompareAL();
 
     //Dijkstra: adjM: graph, s: source vertex
     public static ArrayList<Vertex> DijkstraAlgorithm(int[][] adjM, int s){
-        CompareAL compareAL = new CompareAL();
-
         ArrayList<Vertex> vertices = new ArrayList<>();
         //V: All of our vertices
         ArrayList<Integer> V = new ArrayList<>(Arrays.asList(0,1,2,3,4,5,6,7,8,9));
@@ -50,7 +35,7 @@ public class Dijkstra {
         PriorityQueue<Vertex> Q = new PriorityQueue<>(compareAL);
         // for every vertex in V
         for(int i = 0; i<V.size(); i++){
-            if(i == numToLetter(s)){
+            if(i == s){ // this is for  our source vertex
                 //initallize priority of s with ds
                 // make distance to source vertex = 0
                 Vertex aVertex = new Vertex(numToLetter(i),0,'\0');
@@ -67,13 +52,15 @@ public class Dijkstra {
         }
 
         //delete the minimum priority vertex
-        for(int i = 0; i<V.size();i++){
+        int vSize = V.size();
+        for(int i = 0; i<vSize;i++){
 
             // compared to slides...
             //y = u*
             //u = u
             //delete the minimum priority vertex
             Vertex poll = Q.poll();
+            char letter = poll.node;
             int y = letterToNum(poll.node);
             //du: distance of u
             int d_y = poll.d;
@@ -83,15 +70,19 @@ public class Dijkstra {
             //for every vertex u in V − VT adjacent to u∗ do
             for( int u: V){
                 // find the distance weight from y to u
-                int d_u = getD(vertices,u);
-                int w = adjM[y][u];
-                if((d_y + w )<d_u){
-                    d_u = d_y + w;
-                    char p_u = numToLetter(u);
-                    // update vertices
-                    Vertex update = new Vertex(numToLetter(u),d_u,p_u);
-                    updateVertices(vertices,update);
+                if(adjM[y][u] != 0){
+                    int d_u = getCurrentD(vertices,u);
+                    int w = adjM[y][u];
+                    if((d_y + w )<d_u){
+                        d_u = d_y + w;
+                        char p_u = numToLetter(y);
+                        // update vertices
+                        Vertex updates = new Vertex(numToLetter(u),d_u,p_u);
+                        updateVertices(vertices,updates);
+                        Q = updateQ(vertices,Q);
+                    }
                 }
+
 
             }
         }
@@ -173,10 +164,8 @@ public class Dijkstra {
         }
         return n;
     }
-
-
     // getD: get the current distance using the letter in number form
-    public static int getD(ArrayList<Vertex> vertices, int s){
+    public static int getCurrentD(ArrayList<Vertex> vertices, int s){
         char letter = numToLetter(s);
         int newD = 0;
         for (int i = 0; i< vertices.size();i++){
@@ -188,11 +177,33 @@ public class Dijkstra {
     }
 
     public static void updateVertices(ArrayList<Vertex> vertices, Vertex updateVertex){
+        // updating the vertices
         for (int i = 0; i< vertices.size();i++){
             if(updateVertex.node == vertices.get(i).node){
                 vertices.set(i,updateVertex);
             }
         }
-    }
+        // updating the queue
 
+    }
+    public static PriorityQueue<Vertex> updateQ(ArrayList<Vertex> vertices, PriorityQueue<Vertex> Q){
+        /// figure out how tio make a clone of a queue
+        PriorityQueue<Vertex> oldQ = new PriorityQueue<>(Q);
+        // make arrayList from our old Queue
+        ArrayList<Vertex> qAL = new ArrayList<>(oldQ);
+//        System.out.println(qAL);
+
+        for (int i = 0; i<qAL.size();i++){
+            for(int j = 0; j<vertices.size(); j++){
+                if(qAL.get(i).node == vertices.get(j).node){
+                    qAL.set(i,vertices.get(j));
+                }
+            }
+        }
+        // update Q
+        PriorityQueue<Vertex> newQ = new PriorityQueue<>(compareAL);
+        qAL.forEach(vertex -> newQ.add(vertex));
+       return newQ;
+
+    }
 }

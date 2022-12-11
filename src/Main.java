@@ -59,10 +59,12 @@ public class Main {
 //        System.out.println(Q.poll().node);
 //        Q.poll().printVertex();
 //        Q.poll().printVertex();
-        char s = 'J';
+        char s = 'A';
 
         ArrayList<Vertex> vertices = Dijkstra.DijkstraAlgorithm(Dijkstra.adjMatrix, Dijkstra.letterToNum(s));
         vertices.forEach((vertex -> vertex.printVertex()));
+        System.out.println();
+
 
 
 

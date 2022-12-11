@@ -12,4 +12,4 @@
 
 
 Hash table cannot have null vals while hashmap can
-Problem: make code more general double check with last year HW
+Problem: add scanner, and sequence of nodes for the shortest path
