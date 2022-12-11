@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 
- class CompareAL implements Comparator<ArrayList<Object>> {
+ class CompareAL implements Comparator<Vertex> {
 
-     public int compare(ArrayList<Object> o1, ArrayList<Object> o2) {
+     public int compare(Vertex o1, Vertex o2) {
          int bigger = -1;
-         int o1Int = (Integer) o1.get(0);
-         int o2Int = (Integer) o2.get(0);
+         int o1Int =  o1.d;
+         int o2Int =  o2.d;
          if(o1Int > o2Int){
 //             bigger = o1Int;
              return 1;
