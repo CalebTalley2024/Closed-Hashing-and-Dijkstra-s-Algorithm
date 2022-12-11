@@ -4,10 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.Scanner;
+import java.sql.SQLOutput;
+import java.util.*;
 
 import static java.nio.file.Files.readString;
 
@@ -17,34 +15,34 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
 
-// Question 1
-        ArrayList<String> words = Hash.getHashedWords(Hash.Poe);
-//        ArrayList<String> uniqueWords= Hash.discardDuplicates(words);
-        ArrayList<Integer> vals = Hash.getHashValues(words);
-        ArrayList<ArrayList<Object>> WV = Hash.getWordsAndValues(Hash.Poe);
-        Hashtable<Integer,ArrayList<Object>> HT = Hash.setHashTable(WV);
-        Hash.printHashTable(HT, 293);
-//        System.out.println(WV);
-//        System.out.println(words.size()==vals.size());
-//        System.out.println(vals);
-//        System.out.println(Hash.setHashTable(vals));
+// Question 1 and 2
+//        Hash.questions12();
 
-//        Hashtable<Integer,Integer> HS = new Hashtable<>(3);
-//        HS.put(0,0);
-//        HS.put(1,1);
-//        HS.put(2,2);
-//        System.out.println(HS);
-//        System.out.println(HS.containsKey(3));
-//        System.out.println(HS.containsKey(1));
-//        Hash.getKV(2,HS,0,293);
-//        System.out.println(HS);
-        // Question 4
 
-//        int[][] adj = Graph.adjMatrix;
-//        // test trying to get to D(9)
-//        ArrayList<Integer> path = new ArrayList<>();
-//        Graph.dijkstra(adj,0,2,path,0, new ArrayList<Integer>());
+// Question 4
 
+        CompareAL compareAL = new CompareAL();
+        PriorityQueue<ArrayList<Object>> q = new PriorityQueue<ArrayList<Object>>(compareAL);
+        ArrayList<Object> lst = new ArrayList<>();
+        lst.add(3);
+        lst.add("K");
+        ArrayList<Object> lst1 = new ArrayList<>();
+        lst1.add(19);
+        lst1.add("K");
+        ArrayList<Object> lst2 = new ArrayList<>();
+        lst2.add(2);
+        lst2.add("R");
+
+        ArrayList<Object> lst3 = new ArrayList<>();
+        lst3.add(1);
+        lst3.add("Q");
+        q.add(lst);
+        q.add(lst1);
+        q.add(lst2);
+        q.add(lst3);
+
+
+        System.out.println(q);
 
     }
 

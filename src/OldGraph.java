@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Graph {
+public class OldGraph {
     int size = 10;
     public static int[][] adjMatrix = {
             {0, 53, 10, 12, 0, 0, 0, 0, 0, 0},

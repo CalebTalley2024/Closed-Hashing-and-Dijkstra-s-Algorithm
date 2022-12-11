@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47be1d8a-f38d-4f22-9e81-a2d2db0d4ecc" name="Changes" comment="&#10;&#10;Problems&#10;Q1,2,3: make sure to add a scanner to Q4 when finished&#10;&#10;Q4:  (using recursion, but the output is wrong)">
+    <list default="true" id="47be1d8a-f38d-4f22-9e81-a2d2db0d4ecc" name="Changes" comment="&#10;&#10;Problems&#10;Q1,2,3: most of 1,2 are done&#10;&#10;Q4:  (using recursion, but the output is wrong)&#10;&#10; make sure to add a scanner to Q4">
+      <change afterPath="$PROJECT_DIR$/RavenD2020.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CompareAL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dijkstra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OldGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hash.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -81,7 +84,9 @@
       <updated>1670296417565</updated>
       <workItem from="1670296419233" duration="1948000" />
       <workItem from="1670342508388" duration="18572000" />
-      <workItem from="1670376469820" duration="43671000" />
+      <workItem from="1670376469820" duration="45874000" />
+      <workItem from="1670529555362" duration="6295000" />
+      <workItem from="1670697358786" duration="6999000" />
     </task>
     <task id="LOCAL-00001" summary="started project&#10;&#10;Problems: getting info from txt file&#10;&#10;make sure to add a scanner to Q4 when finished&#10;starting Question 4">
       <created>1670357118318</created>
@@ -118,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670390374214</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="&#10;&#10;Problems&#10;Q1,2,3: most of 1,2 are done&#10;&#10;Q4:  (using recursion, but the output is wrong)&#10;&#10; make sure to add a scanner to Q4">
+      <created>1670525149970</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670525149970</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +154,7 @@
     <MESSAGE value="started project&#10;&#10;&#10;Problem solved: filtering string to only letters,&quot;-&quot; and &quot; ' &quot;&#10;This took longer than it should have since I tried using regex for an hour&#10;&#10;Problems: Q1-3:&#10;&#10;make sure to add a scanner to Q4 when finished&#10;&#10;Q4: have basic concept (using recursion, but the output is wrong)" />
     <MESSAGE value="started project&#10;&#10;&#10;Problem solved: filtering txt file code implemented into the code&#10;&#10;Problems: Q1-3:&#10;&#10;make sure to add a scanner to Q4 when finished&#10;&#10;Q4: have basic concept (using recursion, but the output is wrong)" />
     <MESSAGE value="&#10;&#10;Problems&#10;Q1,2,3: make sure to add a scanner to Q4 when finished&#10;&#10;Q4:  (using recursion, but the output is wrong)" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;&#10;Problems&#10;Q1,2,3: make sure to add a scanner to Q4 when finished&#10;&#10;Q4:  (using recursion, but the output is wrong)" />
+    <MESSAGE value="&#10;&#10;Problems&#10;Q1,2,3: most of 1,2 are done&#10;&#10;Q4:  (using recursion, but the output is wrong)&#10;&#10; make sure to add a scanner to Q4" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;&#10;Problems&#10;Q1,2,3: most of 1,2 are done&#10;&#10;Q4:  (using recursion, but the output is wrong)&#10;&#10; make sure to add a scanner to Q4" />
   </component>
 </project>
