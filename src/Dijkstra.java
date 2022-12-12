@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
+import java.util.*;
 import java.lang.Object;
 
 public class Dijkstra {
@@ -22,15 +19,33 @@ public class Dijkstra {
     };
     public static CompareAL compareAL = new CompareAL();
 
+
+
+    public static void question4(){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the node that you want to start at");
+        System.out.println(" Choices: A, R, T, S, K, J, I, or D...... ");
+        char start = scan.next().charAt(0);
+        System.out.println();
+        System.out.println("Enter the  node that you want to end at");
+        System.out.println(" Choices: A, R, T, S, K, J, I, or D...... ");
+        char end = scan.next().charAt(0);
+
+
+        ArrayList<Vertex> vertices = DijkstraAlgorithm(start);
+        LinkedList<Character> sequence = new LinkedList<>();
+        sequence = getSequence(vertices,end,sequence);
+
+        System.out.println("Your starting node: "+ start + "  ");
+        System.out.println("Your ending node: "+ end);
+        System.out.println("Below is your most optimal path from "+start +" to " + end);
+        System.out.println(sequence);
+
+    }
     /* input: node we are trying to find, vertices
      * iterate thorough list to get right vertice
      * recursive call until the vertice is null
      * */
-
-//    public static void question4(){
-//        Scanner
-//    }
-
     // getSequence: takes in vertices, start node "s" and end node "e"
     // returns the sequence for going from s to e
     public static LinkedList<Character> getSequence(ArrayList<Vertex> vertices, char node, LinkedList<Character> sequence){
@@ -55,14 +70,15 @@ public class Dijkstra {
         }
 
         }
-        System.out.println(sequence);
+//        System.out.println(sequence);
         return sequence;
 
     }
 
 
     //Dijkstra: adjM: graph, s: source vertex
-    public static ArrayList<Vertex> DijkstraAlgorithm(int s){
+    public static ArrayList<Vertex> DijkstraAlgorithm(char start){
+        int s = letterToNum(start);
         int[][] adjM = adjMatrix;
         ArrayList<Vertex> vertices = new ArrayList<>();
         //V: All of our vertices
@@ -125,6 +141,7 @@ public class Dijkstra {
 
             }
         }
+//        vertices.forEach((vertex -> vertex.printVertex()));
         return vertices;
     }
 
