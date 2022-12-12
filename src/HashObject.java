@@ -3,7 +3,7 @@ public class HashObject {
     String word;
     int value;
 
-    // empty object
+    // empty HashObject constructor
     HashObject(){
 //        this.key = key;
         this.word = "";

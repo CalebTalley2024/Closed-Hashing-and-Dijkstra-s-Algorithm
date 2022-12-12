@@ -15,13 +15,19 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-
+        int[] hashValues = new int[10];
+        hashValues[2] = 3;
+//        System.out.println(Arrays.toString(hashValues));
 // Question 1 and 2
         HashTableC HT = new HashTableC();
         HT.questions12();
+//        HT.getNumFilledAddresses();
+//        HT.getMostDistinctHashValue();
+//        HT.getLongestEmptyArea();
+//        HT.getLongestCluster();
 
 
-
+// Question 3
 
 // Question 4
 
