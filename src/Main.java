@@ -20,15 +20,9 @@ public class Main {
 //        System.out.println(Arrays.toString(hashValues));
 // Question 1 and 2
         HashTableC HT = new HashTableC();
-        HT.questions12();
-//        HT.getNumFilledAddresses();
-//        HT.getMostDistinctHashValue();
-//        HT.getLongestEmptyArea();
-//        HT.getLongestCluster();
-
-
+//        HT.questions12();
 // Question 3
-
+//        HT.question3();
 // Question 4
 
 //        Dijkstra.question4();
