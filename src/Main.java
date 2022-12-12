@@ -61,9 +61,11 @@ public class Main {
 //        Q.poll().printVertex();
         char s = 'A';
 
-        ArrayList<Vertex> vertices = Dijkstra.DijkstraAlgorithm(Dijkstra.adjMatrix, Dijkstra.letterToNum(s));
+        ArrayList<Vertex> vertices = Dijkstra.DijkstraAlgorithm( Dijkstra.letterToNum(s));
         vertices.forEach((vertex -> vertex.printVertex()));
         System.out.println();
+        LinkedList<Character> seq = new LinkedList<>();
+        Dijkstra.getSequence(vertices,'D',seq);
 
 
 

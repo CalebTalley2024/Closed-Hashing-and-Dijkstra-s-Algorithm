@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.lang.Object;
 
 public class Dijkstra {
 
-//    int infinity = Integer.MAX_VALUE;
+    //    int infinity = Integer.MAX_VALUE;
     int size = 10;
-
     public static int[][] adjMatrix = {
             {0, 53, 10, 12, 0, 0, 0, 0, 0, 0},
             {53, 0, 33, 0, 2, 0, 101, 0, 0, 0},
@@ -20,11 +20,50 @@ public class Dijkstra {
             {0, 0, 0, 6, 0, 7, 0, 145, 0, 212},
             {0, 0, 0, 0, 0, 0, 71, 66, 212, 0},
     };
-
     public static CompareAL compareAL = new CompareAL();
 
+    /* input: node we are trying to find, vertices
+     * iterate thorough list to get right vertice
+     * recursive call until the vertice is null
+     * */
+
+//    public static void question4(){
+//        Scanner
+//    }
+
+    // getSequence: takes in vertices, start node "s" and end node "e"
+    // returns the sequence for going from s to e
+    public static LinkedList<Character> getSequence(ArrayList<Vertex> vertices, char node, LinkedList<Character> sequence){
+        // Terminating condition break to the return if you have a null Node value
+        int size = vertices.size();
+        if(node != '\0'){
+            sequence.addFirst(node);
+            int n = letterToNum(node);
+//            Vertex vEnd;
+            char newPNode = '1';
+            // get the vertex for our end node
+            for(int i = 0; i<size; i++){
+                // find the Vertex with the end node
+                if(vertices.get(i).node == node){
+
+                    newPNode = vertices.get(i).pNode;
+                    // recursive call that goes till we find a pNode with  a null value
+                    getSequence(vertices,newPNode,sequence);
+                }
+
+
+        }
+
+        }
+        System.out.println(sequence);
+        return sequence;
+
+    }
+
+
     //Dijkstra: adjM: graph, s: source vertex
-    public static ArrayList<Vertex> DijkstraAlgorithm(int[][] adjM, int s){
+    public static ArrayList<Vertex> DijkstraAlgorithm(int s){
+        int[][] adjM = adjMatrix;
         ArrayList<Vertex> vertices = new ArrayList<>();
         //V: All of our vertices
         ArrayList<Integer> V = new ArrayList<>(Arrays.asList(0,1,2,3,4,5,6,7,8,9));
@@ -89,7 +128,7 @@ public class Dijkstra {
         return vertices;
     }
 
-    // getLetter: gets a number and returns the vertice name
+    // getLetter: gets a number and returns the vertex's name
     public static char numToLetter(int n){
         char s = '\0';
         switch(n){
@@ -203,7 +242,8 @@ public class Dijkstra {
         // update Q
         PriorityQueue<Vertex> newQ = new PriorityQueue<>(compareAL);
         qAL.forEach(vertex -> newQ.add(vertex));
-       return newQ;
+        return newQ;
 
     }
+
 }
