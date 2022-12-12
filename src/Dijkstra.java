@@ -2,9 +2,6 @@ import java.util.*;
 import java.lang.Object;
 
 public class Dijkstra {
-
-    //    int infinity = Integer.MAX_VALUE;
-    int size = 10;
     public static int[][] adjMatrix = {
             {0, 53, 10, 12, 0, 0, 0, 0, 0, 0},
             {53, 0, 33, 0, 2, 0, 101, 0, 0, 0},
@@ -18,8 +15,6 @@ public class Dijkstra {
             {0, 0, 0, 0, 0, 0, 71, 66, 212, 0},
     };
     public static CompareAL compareAL = new CompareAL();
-
-
 
     public static void question4(){
         Scanner scan = new Scanner(System.in);

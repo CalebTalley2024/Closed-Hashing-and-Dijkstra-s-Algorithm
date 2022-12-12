@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47be1d8a-f38d-4f22-9e81-a2d2db0d4ecc" name="Changes" comment="&#10;&#10;Done: Q4+ Bonus&#10;Problems&#10;Q1,2,3: redo without using HashMap or HashTable functions&#10;&#10;Q4: Add scanner" />
+    <list default="true" id="47be1d8a-f38d-4f22-9e81-a2d2db0d4ecc" name="Changes" comment="&#10;&#10;Done: Q4+ Bonus&#10;Problems&#10;Q1,2,3: redo without using HashMap or HashTable functions&#10;&#10;Q4: Add scanner">
+      <change afterPath="$PROJECT_DIR$/src/HashObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HashTableC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HashTableObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dijkstra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hashing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Path.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/txtToList.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +61,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   },
   "keyToStringList": {
@@ -91,7 +103,7 @@
       <workItem from="1670342508388" duration="18572000" />
       <workItem from="1670376469820" duration="45874000" />
       <workItem from="1670529555362" duration="6295000" />
-      <workItem from="1670697358786" duration="39789000" />
+      <workItem from="1670697358786" duration="47028000" />
     </task>
     <task id="LOCAL-00001" summary="started project&#10;&#10;Problems: getting info from txt file&#10;&#10;make sure to add a scanner to Q4 when finished&#10;starting Question 4">
       <created>1670357118318</created>
@@ -170,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670807455324</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="&#10;&#10;Done: Q4+ Bonus&#10;Problems&#10;Q1,2,3: redo without using HashMap or HashTable functions&#10;&#10;Q4: Add scanner">
+      <created>1670807553663</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670807553663</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
