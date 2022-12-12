@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 
 public class Hashing {
@@ -84,8 +85,8 @@ public class Hashing {
                 validCharArr.add(aChar);
             }
         }
-        String newWord = validCharArr.toString();
-//        String newWord = validCharArr.stream().map(Object::toString).collect(Collectors.joining());
+//        String newWord = validCharArr.toString();
+        String newWord = validCharArr.stream().map(Object::toString).collect(Collectors.joining());
         return newWord;
     }
 

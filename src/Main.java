@@ -17,11 +17,9 @@ public class Main {
 
 
 // Question 1 and 2
+        HashTableC HT = new HashTableC();
+        HT.questions12();
 
-//        Hash.questions12();
-            HashTableC HTC = new HashTableC();
-            HTC.initHT(5);
-            HTC.printHTable();
 
 
 

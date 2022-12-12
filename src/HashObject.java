@@ -6,7 +6,7 @@ public class HashObject {
     // empty object
     HashObject(){
 //        this.key = key;
-        this.word = "-1";
+        this.word = "";
         this.value = -1;
     }
 

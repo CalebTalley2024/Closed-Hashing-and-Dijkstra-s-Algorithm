@@ -1,7 +1,5 @@
 # HW 5
-## Q1-3: Hash Table
-# Q1 - ~ 1-2 hrs
-
+# Q1
 # Q2 - ~ 1-2 hrs - B said to remove hash functions
 - Problem: remember to change the isValid function to work for the Poe txt file, NOT Raven
 # Q3 - ~ 3-4 hrs
