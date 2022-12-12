@@ -18,23 +18,27 @@ public class Dijkstra {
 
     public static void question4(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter the node that you want to start at");
+        System.out.println("Enter valid starting node:");
         System.out.println(" Choices: A, R, T, S, K, J, I, or D...... ");
         char start = scan.next().charAt(0);
         System.out.println();
-        System.out.println("Enter the  node that you want to end at");
+        System.out.println("Enter valid ending node");
         System.out.println(" Choices: A, R, T, S, K, J, I, or D...... ");
         char end = scan.next().charAt(0);
 
 
         ArrayList<Vertex> vertices = DijkstraAlgorithm(start);
+//        vertices.forEach(vertex -> vertex.printVertex());
         LinkedList<Character> sequence = new LinkedList<>();
         sequence = getSequence(vertices,end,sequence);
+        int lengthPath = getLengthPath(vertices,end);
 
         System.out.println("Your starting node: "+ start + "  ");
         System.out.println("Your ending node: "+ end);
+        System.out.println();
         System.out.println("Below is your most optimal path from "+start +" to " + end);
         System.out.println(sequence);
+        System.out.println("The length of the path is "+ lengthPath);
 
     }
     /* input: node we are trying to find, vertices
@@ -71,6 +75,17 @@ public class Dijkstra {
     }
 
 
+    public static int getLengthPath(ArrayList<Vertex> vertices, char end){
+        int length = 0;
+        for(int i = 0; i< vertices.size();i++){
+            Vertex aVertex = vertices.get(i);
+//            System.out.println(aVertex.d);
+            if(aVertex.node == end){
+                length = aVertex.d;
+            }
+        }
+        return length;
+    }
     //Dijkstra: adjM: graph, s: source vertex
     public static ArrayList<Vertex> DijkstraAlgorithm(char start){
         int s = letterToNum(start);

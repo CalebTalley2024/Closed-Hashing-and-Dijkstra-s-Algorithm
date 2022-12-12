@@ -13,8 +13,12 @@ public class HashTableC {
 
     public  void questions12() throws FileNotFoundException {
         // change these two values to work on test and actual text files
-        int m = 1000;
-        String txtFile = Hashing.Raven;
+//        int testM = 1000;
+//        String testTxtFile = Hashing.Raven;
+
+        String txtFile = Hashing.Poe;
+        int m = 293;
+
         this.initHT(m);
         this.setHashTableC(txtFile,m);
         this.printHTable();
@@ -24,8 +28,11 @@ public class HashTableC {
 
     }
     public void question3() throws FileNotFoundException {
-        int m = 1000;
-        String txtFile = Hashing.Raven;
+//        int testM = 1000;
+//        String testTxtFile = Hashing.Raven;
+
+        String txtFile = Hashing.Poe;
+        int m = 293;
         this.initHT(m);
         this.setHashTableC(txtFile,m);
 

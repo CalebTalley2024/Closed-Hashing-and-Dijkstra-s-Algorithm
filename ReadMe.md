@@ -1,13 +1,10 @@
-# HW 5
-# Q1
-# Q2 - ~ 1-2 hrs - B said to remove hash functions
-- Problem: remember to change the isValid function to work for the Poe txt file, NOT Raven
-# Q3 - ~ 3-4 hrs
-Hash table cannot have null vals while hashmap can
-Problem: add scanner, and sequence of nodes for the shortest path
-
+# HW 5 - Caleb Talley
+- To run questions 1 - 4, uncomment question that you want to run
+# Q1,Q2,Q3: Custom HashTable
+- HashTableC is a custom function that mimics the Hashtable library
+- Wraparounds were taken into account when making functions
 # Q4: Dijsktra's Algorithm - Bonus
-- When typing input, make sure to Only use single Capital letters
+- When typing input, make sure to only use single capital letters
 - Easter Egg: When you go from the last node "D" to the first node "A", the sequence is "[D, I, J, K, S, T, R, A]", which is the name of the algorithm we are using. 
 
 

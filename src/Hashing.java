@@ -99,7 +99,8 @@ public class Hashing {
         char []word = wordString.toCharArray();
         int s = word.length;
         int C = 123;
-        int m = 1000;
+        int testM = 1000;
+        int m = 293;
         int h = 0;
 
         for(int i = 0; i< s;i++){

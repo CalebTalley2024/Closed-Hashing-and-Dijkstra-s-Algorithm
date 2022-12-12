@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47be1d8a-f38d-4f22-9e81-a2d2db0d4ecc" name="Changes" comment="&#10;&#10;Done: Q1,Q2, Q4 + Bonus&#10;Problems: Q3 (just have to finish get Fartest Word)&#10;- Strategy: add to HashObject to make a variable for how far of the value is from the target&#10;&#10;Test using Raven, then plug in Poe">
+    <list default="true" id="47be1d8a-f38d-4f22-9e81-a2d2db0d4ecc" name="Changes" comment="&#10;&#10;Done: Q1,Q2,Q3 Q4 + Bonus&#10;Problems: plug in Poe, double checking">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HashObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dijkstra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HashTableC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashTableC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hashing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +100,7 @@
       <workItem from="1670376469820" duration="45874000" />
       <workItem from="1670529555362" duration="6295000" />
       <workItem from="1670697358786" duration="60220000" />
-      <workItem from="1670862484474" duration="12702000" />
+      <workItem from="1670862484474" duration="15235000" />
     </task>
     <task id="LOCAL-00001" summary="started project&#10;&#10;Problems: getting info from txt file&#10;&#10;make sure to add a scanner to Q4 when finished&#10;starting Question 4">
       <created>1670357118318</created>
@@ -205,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670870019318</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="&#10;&#10;Done: Q1,Q2,Q3 Q4 + Bonus&#10;Problems: plug in Poe, double checking">
+      <created>1670877301417</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670877301417</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +247,18 @@
     <MESSAGE value="&#10;&#10;Done: Q4+ Bonus&#10;Problems&#10;Q1,2,3: transitioning from Hashtable to HashTableC&#10;&#10;Q4: Add scanner" />
     <MESSAGE value="&#10;&#10;Done: Q1,Q2, Q4 + Bonus&#10;Problems: Q3&#10;&#10;Test using Raven, then plug in Poe" />
     <MESSAGE value="&#10;&#10;Done: Q1,Q2, Q4 + Bonus&#10;Problems: Q3 (just have to finish get Fartest Word)&#10;- Strategy: add to HashObject to make a variable for how far of the value is from the target&#10;&#10;Test using Raven, then plug in Poe" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;&#10;Done: Q1,Q2, Q4 + Bonus&#10;Problems: Q3 (just have to finish get Fartest Word)&#10;- Strategy: add to HashObject to make a variable for how far of the value is from the target&#10;&#10;Test using Raven, then plug in Poe" />
+    <MESSAGE value="&#10;&#10;Done: Q1,Q2,Q3 Q4 + Bonus&#10;Problems: plug in Poe, double checking" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;&#10;Done: Q1,Q2,Q3 Q4 + Bonus&#10;Problems: plug in Poe, double checking" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/HashTableC.java</url>
+          <line>217</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

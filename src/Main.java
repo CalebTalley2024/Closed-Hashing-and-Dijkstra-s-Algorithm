@@ -1,30 +1,20 @@
 
-
-import javax.lang.model.element.ModuleElement;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.sql.SQLOutput;
-import java.util.*;
-
-import static java.nio.file.Files.readString;
-
 public class Main {
 
 
     public static void main(String[] args) throws IOException {
 
-        int[] hashValues = new int[10];
-        hashValues[2] = 3;
-//        System.out.println(Arrays.toString(hashValues));
+        // to run questions 1 - 4, uncomment question that you want to run
+        // the question12 function is uncommented by default
+        // Look at ReadMe outside of the src folder for more details and answers to Easter egg
 // Question 1 and 2
-        HashTableC HT = new HashTableC();
-//        HT.questions12();
-// Question 3
-//        HT.question3();
+        HashTableC HT12 = new HashTableC();
+        HT12.questions12();
+        HashTableC HT3 = new HashTableC();
+//        HT3.question3();
 // Question 4
-
+        // Make sure to only use single capital letters
 //        Dijkstra.question4();
     }
 
